@@ -1,0 +1,17 @@
+{
+    "name": "colon-polyp-data-entry",
+    "author": "Dan Heslinga <dan@heslinga.us>",
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "simplify creation of colon polyp reports serialized in yaml",
+    "keywords": [
+        "CQL",
+        "CDS",
+        "decision support"
+    ],
+    "main": "src/main.js",
+    "private": true,
+    "dependencies": {
+        "js-yaml": "^4.1.0"
+    }
+}
