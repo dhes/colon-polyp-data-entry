@@ -1,0 +1,52 @@
+data:
+  - resourceType: Procedure
+    code: SNOMEDCT#25732003 Fiberoptic colonoscopy with biopsy (procedure)
+    performedDateTime: 
+  - resourceType: Procedure
+    id: 
+    code: SNOMEDCT#311774002 Colonoscopic polypectomy (procedure)
+    performedDateTime: 
+    partOf:
+    - reference: Procedure/ # id of Colonoscopic polypectomy
+      display: Colonoscopic polypectomy
+    report: 
+    - reference: DiagnosticReport/ # id of DiagnosticReport
+      display: Surgical Pathology
+  - resourceType: DiagnosticReport
+    id: 
+    category: http://terminology.hl7.org/CodeSystem/v2-0074#SP Surgical Pathology
+    code: LOINC#11529-5 Surgical pathology study
+    effectiveDateTime: 
+    issued: 
+    specimen:
+    - reference: Specimen/ # id of first  (or corresponding) specimen
+      display: # same diplay name as note.text of first  (or corresponding) specimen
+    result:
+    - reference: Observation/ # id of first  (or corresponding) specimen observation
+      display: # same diplay name as note.text of first  (or corresponding) specimen
+  - resourceType: Specimen
+    id: 
+    collection:
+      bodySite: SNOMEDCT#485005 Transverse colon structure (body structure)
+      method: SNOMEDCT#129304002 Excision - action
+      quantity: # e.g. 10 mm, from procedure report. If a range is given, use the maximum. 
+      collectedDateTime: 
+    type: http://terminology.hl7.org/CodeSystem/v2-0487#POL Polyps
+    note:
+    - text: # short description of polpy from procedure report
+  - resourceType: Observation
+    id: 
+    code: SNOMEDCT# # SNOMEDCT#309226005 Colonic polyp sample (specimen) or SNOMEDCT#309263001 Rectal polyp sample (specimen)
+    specimen: 
+      reference: Specimen/ # same id as first (or corresponding) specimen
+      display: # same diplay name as note.text of first  (or corresponding) specimen
+    # these refer to items in reference_template.yml
+    hasMember: 
+      - reference: Observation/
+        display: # Histopathology
+      - reference: Observation/
+        display: # Piecemeal excision? t/f
+      - reference: Observation/
+        display: # Severe dysplasia? t/f
+      - reference: Observation/71f00532-66d9-4634-aa0e-bff0aafaf9a1
+        display: # No evidence of malignant neoplasm? (referenced or left unreferenced if false)

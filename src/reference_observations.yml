@@ -1,0 +1,52 @@
+# polyp granular observations, which are reused across Specimens and DiagnosticReports
+# these observations should occur once in a patient's yaml chart
+  # - resourceType: Observation
+  #   id: 
+  #   category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+  #   code: LOINC#34574-4 Pathology report final diagnosis
+  #   valueCodeableConcept: SNOMEDCT#444898006 Tubular adenoma of colon (disorder)
+  - resourceType: Observation
+    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: LOINC#34574-4 Pathology report final diagnosis
+    valueCodeableConcept: SNOMEDCT#444408007 Tubular adenoma (disorder)
+  - resourceType: Observation
+    id: 93b40608-5c08-4917-b396-7a660df76587
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: LOINC#34574-4 Pathology report final diagnosis
+    valueCodeableConcept: SNOMEDCT#89452002 Hyperplastic polyp of intestine (disorder)
+  - resourceType: Observation
+    id: 9a5ada92-bb53-4cf3-a04b-11a0e672e1f1
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: LOINC#34574-4 Pathology report final diagnosis
+    valueCodeableConcept: SNOMEDCT#68534000 Intestinal mucous membrane structure (body structure)
+  - resourceType: Observation
+    id: 
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: LOINC#34574-4 Pathology report final diagnosis
+    valueCodeableConcept: SNOMEDCT#128859003 Villous adenoma (morphologic abnormality)
+  - resourceType: Observation
+    id: 
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: LOINC#34574-4 Pathology report final diagnosis
+    valueCodeableConcept: SNOMEDCT#61722000 Tubulovillous adenoma (morphologic abnormality)
+  - resourceType: Observation
+    id: abcb49db-960b-4de6-aa0a-2e072c438dd4
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: SNOMEDCT#55237006 Severe dysplasia (morphologic abnormality)
+    valueBoolean: false
+  - resourceType: Observation
+    id: 71f00532-66d9-4634-aa0e-bff0aafaf9a1
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: SNOMEDCT#110396000 No evidence of malignant neoplasm (finding)
+    valueBoolean: true
+  - resourceType: Observation
+    id: a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
+    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
+    code: SNOMEDCT#787139004 Piecemeal excision
+    valueBoolean: false
+  - resourceType: Observation
+    id: 27336643-3d3b-41e3-9cc2-5e46524ceb00
+    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
+    code: SNOMEDCT#787139004 Piecemeal excision
+    valueBoolean: true
