@@ -21,9 +21,15 @@ data:
     specimen:
     - reference: Specimen/ # id of first (or corresponding) specimen
       display: # same display name as note.text of first  (or corresponding) specimen
+    # - reference: Specimen1
+    # ... 
+    # - reference SpecimenN
     result:
     - reference: Observation/ # id of first  (or corresponding) specimen observation
       display: # same display name as note.text of first  (or corresponding) specimen
+    # - reference: Observaion1
+    # ... 
+    # - reference ObservationN    
   - resourceType: Specimen
     id: 
     collection:
@@ -50,3 +56,8 @@ data:
         display: # Severe dysplasia? t/f
       - reference: Observation/71f00532-66d9-4634-aa0e-bff0aafaf9a1
         display: # No evidence of malignant neoplasm? (referenced if true; left unreferenced if false)
+  # specimen 1
+  # observation 1
+  # ...
+  # specimen n
+  # observation n

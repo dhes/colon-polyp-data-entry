@@ -22,13 +22,6 @@ doc.data[diagnosticReportIndex].specimen[0].reference = 'Specimen/' + specimen0I
 doc.data[observationIndex].id = observationId;
 doc.data[observationIndex].specimen[0].reference = 'Specimen/' + specimen0Id;
 doc.data[diagnosticReportIndex].result[0].reference   = 'Observation/' + observationId;
-console.log(doc.data[colonoscopyProcedureIndex].id);
-console.log(doc.data[colonoscopicPolypectomyProcedureIndex].partOf[0].reference);
-console.log(doc.data[diagnosticReportIndex].id);
-console.log(doc.data[colonoscopicPolypectomyProcedureIndex].report[0].reference);
-console.log(doc.data[specimen0Index].id);
-console.log(doc.data[diagnosticReportIndex].specimen[0].reference);
-console.log(doc.data[observationIndex].specimen[0].reference);
-console.log(doc.data[observationIndex].id);
-console.log(doc.data[diagnosticReportIndex].result[0].reference);
-fs.writeFileSync('ids.yml',yaml.dump(doc.data));
+// for each additional specimen pop a Specimen then and Observation to the end of the array and assign ids
+// ... then pop a specimen reference and result reference to DiagnosticReport
+// and tie them back to the new Speciment and OBservation ids. 
