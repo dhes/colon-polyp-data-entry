@@ -12,15 +12,15 @@ colonoscopyProcedureId = uuidv4();
 diagnosticReportId = uuidv4();
 specimenId = uuidv4();
 observationId = uuidv4();
-// console.log(doc.data[polypectomyProcedureIndex].id);
-// console.log(doc.data[polypectomyProcedureIndex]);
+// assign and log back ids
 doc.data[colonoscopyProcedureIndex].id = colonoscopyProcedureId;
 doc.data[colonoscopicPolypectomyProcedureIndex].partOf[0].reference = 'Procedure/' + colonoscopyProcedureId;
 doc.data[diagnosticReportIndex].id = diagnosticReportId;
 doc.data[colonoscopicPolypectomyProcedureIndex].report[0].reference = 'DiagnosticReport/' + diagnosticReportId;
-doc.data[specimenIndex].id = specimenId
-doc.data[diagnosticReportIndex].specimen[0].reference = 'Specimen/' + specimenId
-doc.data[observationIndex].id = observationId
+doc.data[specimenIndex].id = specimenId;
+doc.data[diagnosticReportIndex].specimen[0].reference = 'Specimen/' + specimenId;
+doc.data[observationIndex].id = observationId;
+doc.data[observationIndex].specimen[0].reference = 'Specimen/' + specimenId;
 doc.data[diagnosticReportIndex].result[0].reference   = 'Observation/' + observationId;
 console.log(doc.data[colonoscopyProcedureIndex].id);
 console.log(doc.data[colonoscopicPolypectomyProcedureIndex].partOf[0].reference);
@@ -28,6 +28,7 @@ console.log(doc.data[diagnosticReportIndex].id);
 console.log(doc.data[colonoscopicPolypectomyProcedureIndex].report[0].reference);
 console.log(doc.data[specimenIndex].id);
 console.log(doc.data[diagnosticReportIndex].specimen[0].reference);
+console.log(doc.data[observationIndex].specimen[0].reference);
 console.log(doc.data[observationIndex].id);
 console.log(doc.data[diagnosticReportIndex].result[0].reference);
-
+fs.writeFileSync('ids.yml',yaml.dump(doc.data));
