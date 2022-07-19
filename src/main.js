@@ -7,12 +7,11 @@ const colonoscopicPolypectomyProcedureIndex = 1;
 const diagnosticReportIndex = 2;
 const specimen0Index = 3;
 const observationIndex = 4;
-// const polypectomyProcedureIndex = doc.data.findIndex(c => c.code.slice(0,18)==="SNOMEDCT#311774002");
 colonoscopyProcedureId = uuidv4();
 diagnosticReportId = uuidv4();
 specimen0Id = uuidv4();
 observationId = uuidv4();
-// assign and log back ids
+// assign ids
 doc.data[colonoscopyProcedureIndex].id = colonoscopyProcedureId;
 doc.data[colonoscopicPolypectomyProcedureIndex].partOf[0].reference = 'Procedure/' + colonoscopyProcedureId;
 doc.data[diagnosticReportIndex].id = diagnosticReportId;
@@ -22,6 +21,7 @@ doc.data[diagnosticReportIndex].specimen[0].reference = 'Specimen/' + specimen0I
 doc.data[observationIndex].id = observationId;
 doc.data[observationIndex].specimen[0].reference = 'Specimen/' + specimen0Id;
 doc.data[diagnosticReportIndex].result[0].reference   = 'Observation/' + observationId;
+fs.writeFileSync('id.yml', yaml.dump(doc.data));
 // for each additional specimen pop a Specimen then and Observation to the end of the array and assign ids
 // ... then pop a specimen reference and result reference to DiagnosticReport
 // and tie them back to the new Speciment and OBservation ids. 
