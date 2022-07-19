@@ -1,5 +1,6 @@
-# polyp granular observations, which are reused across Specimens and DiagnosticReports
+# polyp granular observations, which are reused across Specimens and DiagnosticReports within a patient file
 # these observations should occur once in a patient's yaml chart
+  # this first is retired in favor of just plain tubular adenoma (wihhout regard to location)
   # - resourceType: Observation
   #   id: 
   #   category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory

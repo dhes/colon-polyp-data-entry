@@ -12,6 +12,7 @@
     "main": "src/main.js",
     "private": true,
     "dependencies": {
-        "js-yaml": "^4.1.0"
+        "js-yaml": "^4.1.0",
+        "uuid": "^8.3.2"
     }
 }

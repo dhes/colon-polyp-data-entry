@@ -49,4 +49,4 @@ data:
       - reference: Observation/
         display: # Severe dysplasia? t/f
       - reference: Observation/71f00532-66d9-4634-aa0e-bff0aafaf9a1
-        display: # No evidence of malignant neoplasm? (referenced or left unreferenced if false)
+        display: # No evidence of malignant neoplasm? (referenced if true; left unreferenced if false)
