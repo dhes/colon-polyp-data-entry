@@ -1,16 +1,16 @@
 data:
   - resourceType: Procedure
+    id: 
     code: SNOMEDCT#25732003 Fiberoptic colonoscopy with biopsy (procedure)
     performedDateTime: 
   - resourceType: Procedure
-    id: 
     code: SNOMEDCT#311774002 Colonoscopic polypectomy (procedure)
     performedDateTime: 
     partOf:
-    - reference: Procedure/ # id of Colonoscopic polypectomy
-      display: Colonoscopic polypectomy
+    - reference: Procedure/ # id of colonoscopy Procedure
+      display: Colonoscopy
     report: 
-    - reference: DiagnosticReport/ # id of DiagnosticReport
+    - reference: DiagnosticReport/ # id of DiagnosticReport Observation
       display: Surgical Pathology
   - resourceType: DiagnosticReport
     id: 
@@ -19,11 +19,11 @@ data:
     effectiveDateTime: 
     issued: 
     specimen:
-    - reference: Specimen/ # id of first  (or corresponding) specimen
-      display: # same diplay name as note.text of first  (or corresponding) specimen
+    - reference: Specimen/ # id of first (or corresponding) specimen
+      display: # same display name as note.text of first  (or corresponding) specimen
     result:
     - reference: Observation/ # id of first  (or corresponding) specimen observation
-      display: # same diplay name as note.text of first  (or corresponding) specimen
+      display: # same display name as note.text of first  (or corresponding) specimen
   - resourceType: Specimen
     id: 
     collection:
