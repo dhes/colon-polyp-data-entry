@@ -1,14 +1,12 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
-// const uuidv4 = require('uuid/v4');
 const { v4: uuidv4 } = require('uuid');
-// a = {
-//     "resourceType": "Procedure",
-//     "id": "96582371-740e-4fbf-9a7b-7a1450472b76",
-//     "performedDateTime": "2021-02-21",
-//     "code": "SNOMEDCT#736719000 Repair of left inguinal hernia (procedure)",
-// };
-// console.log(a);
-// fs.writeFileSync('procedure.yml',yaml.dump(a));
 const doc = yaml.load(fs.readFileSync('src/report_template.yml','utf8'));
-console.log(uuidv4());
+// console.log(uuidv4());
+console.log(doc.data[1].id);
+// const procCode="SNOMEDCT#NOMEDCT#25732003 Fiberoptic colonoscopy with biopsy (procedure)")); Fiberoptic colonoscopy with biopsy (procedure)";
+// console.log(procCode.slice(0,17));
+const polypectomyProcedureIndex = doc.data.findIndex(c => c.code.slice(0,18)==="SNOMEDCT#311774002");
+doc.data[polypectomyProcedureIndex].id=uuidv4();
+console.log(doc.data[polypectomyProcedureIndex].id);
+console.log(doc.data[polypectomyProcedureIndex]);
