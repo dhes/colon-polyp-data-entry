@@ -20,12 +20,16 @@ report[diagnosticReportIndex].id = diagnosticReportId;
 report[colonoscopicPolypectomyProcedureIndex].report[0].reference =
   "DiagnosticReport/" + diagnosticReportId;
 for (let i = 0; i < 3; i++) {
-  const specimen = {...specimenTemplate};
+  const specimen = { ...specimenTemplate };
   const specimenId = uuidv4();
   specimen.id = specimenId;
-  const specimenObservation = {...specimenObservationTemplate};
+  const specimenObservation = { ...specimenObservationTemplate };
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;
+  specimenObservation.specimen.push({
+    reference: "Specimen/" + specimenId,
+    display: null,
+  });
   report.push(specimen);
   report.push(specimenObservation);
   report[diagnosticReportIndex].specimen.push({
@@ -37,12 +41,5 @@ for (let i = 0; i < 3; i++) {
     reference: "Observation/" + specimenObservationId,
     display: null,
   });
-  // push specimen reference to corresponding result Observation
-  report[report.length - 1].specimen.push({
-    reference: "Specimen/" + specimenId,
-    display: null,
-  });
-  console.log(report.length - 1);
-  console.log(report[report.length - 1].specimen[1].reference);
 }
 fs.writeFileSync("oneMoreSpecimen.yml", yaml.dump(report, { noRefs: true }));
