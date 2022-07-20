@@ -19,11 +19,13 @@ report[colonoscopicPolypectomyProcedureIndex].partOf[0].reference =
 report[diagnosticReportIndex].id = diagnosticReportId;
 report[colonoscopicPolypectomyProcedureIndex].report[0].reference =
   "DiagnosticReport/" + diagnosticReportId;
-for (let i = 0; i < 3; i++) {
+function addSpecimen () {
   const specimen = { ...specimenTemplate };
+  //   const specimen = structuredClone(specimenTemplate);
   const specimenId = uuidv4();
   specimen.id = specimenId;
   const specimenObservation = { ...specimenObservationTemplate };
+  //   const specimenObservation = structuredClone(specimenObservationTemplate };
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;
   specimenObservation.specimen.push({
@@ -42,4 +44,6 @@ for (let i = 0; i < 3; i++) {
     display: null,
   });
 }
+addSpecimen();
+addSpecimen();
 fs.writeFileSync("oneMoreSpecimen.yml", yaml.dump(report, { noRefs: true }));
