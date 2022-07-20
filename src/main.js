@@ -7,12 +7,23 @@ const colonoscopicPolypectomyProcedureIndex = 1;
 const diagnosticReportIndex = 2;
 const specimen0Index = 3;
 const specimenObservationIndex = 4;
-const specimenTemplate = {...doc.data[specimen0Index]};
-const specimenObservationTemplate = {...doc.data[specimenObservationIndex]};
-const diagnosticReportSpecimenTemplate = {...doc.data[diagnosticReportIndex].specimen[0]};
-const diagnosticReportResultTemplate = {...doc.data[diagnosticReportIndex].result[0]};
-// console.log(diagnosticReportSpecimenTemplate);
-// console.log(diagnosticReportResultTemplate);
+
+// const specimenTemplate = {...doc.data[specimen0Index]};
+// fs.writeFileSync('specimenTemplate.yml', yaml.dump(doc.data[specimen0Index]));
+const specimenTemplate = yaml.load(fs.readFileSync('specimenTemplate.yml','utf8'))
+
+// const specimenObservationTemplate = {...doc.data[specimenObservationIndex]};
+// fs.writeFileSync('specimenObservationTemplate.yml', yaml.dump(doc.data[specimenObservationIndex]));
+const specimenObservationTemplate = yaml.load(fs.readFileSync('specimenObservationTemplate.yml','utf8'))
+
+// const diagnosticReportSpecimenTemplate = {...doc.data[diagnosticReportIndex].specimen[0]};
+// fs.writeFileSync('diagnosticReportSpecimenTemplate.yml', yaml.dump(doc.data[diagnosticReportIndex].specimen[0]));
+const diagnosticReportSpecimenTemplate = yaml.load(fs.readFileSync('diagnosticReportSpecimenTemplate.yml','utf8'))
+
+// const diagnosticReportResultTemplate = {...doc.data[diagnosticReportIndex].result[0]};
+// fs.writeFileSync('diagnosticReportResultTemplate.yml', yaml.dump(doc.data[diagnosticReportIndex].result[0]));
+const diagnosticReportResultTemplate = yaml.load(fs.readFileSync('diagnosticReportResultTemplate.yml','utf8'))
+
 colonoscopyProcedureId = uuidv4();
 diagnosticReportId = uuidv4();
 specimen0Id = uuidv4();

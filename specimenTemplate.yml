@@ -1,0 +1,10 @@
+resourceType: Specimen
+id: null
+collection:
+  bodySite: null
+  method: SNOMEDCT#129304002 Excision - action
+  quantity: null
+  collectedDateTime: null
+type: http://terminology.hl7.org/CodeSystem/v2-0487#POL Polyps
+note:
+  - text: null
