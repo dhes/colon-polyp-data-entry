@@ -1,9 +1,7 @@
 resourceType: Observation
 id: null
 code: SNOMEDCT#
-specimen:
-  - reference: Specimen/
-    display: null
+specimen: []
 hasMember:
   - reference: Observation/
     display: null
@@ -11,5 +9,5 @@ hasMember:
     display: null
   - reference: Observation/
     display: null
-  - reference: Observation/71f00532-66d9-4634-aa0e-bff0aafaf9a1
+  - reference: Observation/
     display: null

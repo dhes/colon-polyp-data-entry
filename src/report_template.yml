@@ -1,63 +1,62 @@
-data:
-  - resourceType: Procedure
-    id: 
-    code: SNOMEDCT#25732003 Fiberoptic colonoscopy with biopsy (procedure)
-    performedDateTime: 
-  - resourceType: Procedure
-    code: SNOMEDCT#311774002 Colonoscopic polypectomy (procedure)
-    performedDateTime: 
-    partOf:
-    - reference: Procedure/ # id of colonoscopy Procedure
-      display: Colonoscopy
-    report: 
-    - reference: DiagnosticReport/ # id of DiagnosticReport Observation
-      display: Surgical Pathology
-  - resourceType: DiagnosticReport
-    id: 
-    category: http://terminology.hl7.org/CodeSystem/v2-0074#SP Surgical Pathology
-    code: LOINC#11529-5 Surgical pathology study
-    effectiveDateTime: 
-    issued: 
-    specimen:
-    - reference: Specimen/ # id of first (or corresponding) specimen
-      display: # same display name as note.text of first  (or corresponding) specimen
-    # - reference: Specimen1
-    # ... 
-    # - reference SpecimenN
-    result:
-    - reference: Observation/ # id of first  (or corresponding) specimen observation
-      display: # same display name as note.text of first  (or corresponding) specimen
-    # - reference: Observaion1
-    # ... 
-    # - reference ObservationN    
-  - resourceType: Specimen
-    id: 
-    collection:
-      bodySite: # SNOMEDCT code for cecum, ascending/transverse/descending/sigmoid colon or rectum
-      method: SNOMEDCT#129304002 Excision - action
-      quantity: # e.g. 10 mm, from procedure report. If a range is given, use the maximum. 
-      collectedDateTime: 
-    type: http://terminology.hl7.org/CodeSystem/v2-0487#POL Polyps
-    note:
-    - text: # corresponding short description of polyp from procedure report
-  - resourceType: Observation
-    id: 
-    code: SNOMEDCT# # SNOMEDCT#309226005 Colonic polyp sample (specimen) or SNOMEDCT#309263001 Rectal polyp sample (specimen)
-    specimen: 
-    - reference: Specimen/ # same id as first (or corresponding) specimen
-      display: # same diplay name as note.text of first  (or corresponding) specimen
-    # these refer to items in reference_template.yml
-    hasMember: 
-      - reference: Observation/
-        display: # Histopathology
-      - reference: Observation/
-        display: # Piecemeal excision? t/f
-      - reference: Observation/
-        display: # Severe dysplasia? t/f
-      - reference: Observation/71f00532-66d9-4634-aa0e-bff0aafaf9a1
-        display: # No evidence of malignant neoplasm? (referenced if true; left unreferenced if false)
-  # specimen 1
-  # observation 1
-  # ...
-  # specimen n
-  # observation n
+- resourceType: Procedure
+  id: 
+  code: SNOMEDCT#25732003 Fiberoptic colonoscopy with biopsy (procedure)
+  performedDateTime: 
+- resourceType: Procedure
+  code: SNOMEDCT#311774002 Colonoscopic polypectomy (procedure)
+  performedDateTime: 
+  partOf:
+  - reference: Procedure/ # id of colonoscopy Procedure
+    display: Colonoscopy
+  report: 
+  - reference: DiagnosticReport/ # id of DiagnosticReport Observation
+    display: Surgical Pathology
+- resourceType: DiagnosticReport
+  id: 
+  category: http://terminology.hl7.org/CodeSystem/v2-0074#SP Surgical Pathology
+  code: LOINC#11529-5 Surgical pathology study
+  effectiveDateTime: 
+  issued: 
+  specimen: []
+  # - reference: Specimen/ # id of first (or corresponding) specimen
+  #   display: # same display name as note.text of first  (or corresponding) specimen
+  # - reference: Specimen1
+  # ... 
+  # - reference SpecimenN
+  result: []
+  # - reference: Observation/ # id of first  (or corresponding) specimen observation
+  #   display: # same display name as note.text of first  (or corresponding) specimen
+  # - reference: Observaion1
+  # ... 
+  # - reference ObservationN    
+# - resourceType: Specimen
+#   id: 
+#   collection:
+#     bodySite: # SNOMEDCT code for cecum, ascending/transverse/descending/sigmoid colon or rectum
+#     method: SNOMEDCT#129304002 Excision - action
+#     quantity: # e.g. 10 mm, from procedure report. If a range is given, use the maximum. 
+#     collectedDateTime: 
+#   type: http://terminology.hl7.org/CodeSystem/v2-0487#POL Polyps
+#   note:
+#   - text: # corresponding short description of polyp from procedure report
+# - resourceType: Observation
+#   id: 
+#   code: SNOMEDCT# # SNOMEDCT#309226005 Colonic polyp sample (specimen) or SNOMEDCT#309263001 Rectal polyp sample (specimen)
+#   specimen: 
+#   - reference: Specimen/ # same id as first (or corresponding) specimen
+#     display: # same diplay name as note.text of first  (or corresponding) specimen
+#   # these refer to items in reference_template.yml
+#   hasMember: 
+#     - reference: Observation/
+#       display: # Histopathology
+#     - reference: Observation/
+#       display: # Piecemeal excision? t/f
+#     - reference: Observation/
+#       display: # Severe dysplasia? t/f
+#     - reference: Observation/
+#       display: # No evidence of malignant neoplasm? (referenced if true; left unreferenced if false)
+# specimen 0
+# observation 0
+# ...
+# specimen n
+# observation n
