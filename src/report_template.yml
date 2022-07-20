@@ -33,13 +33,13 @@ data:
   - resourceType: Specimen
     id: 
     collection:
-      bodySite: SNOMEDCT#485005 Transverse colon structure (body structure)
+      bodySite: # SNOMEDCT code for cecum, ascending/transverse/descending/sigmoid colon or rectum
       method: SNOMEDCT#129304002 Excision - action
       quantity: # e.g. 10 mm, from procedure report. If a range is given, use the maximum. 
       collectedDateTime: 
     type: http://terminology.hl7.org/CodeSystem/v2-0487#POL Polyps
     note:
-    - text: # short description of polpy from procedure report
+    - text: # corresponding short description of polyp from procedure report
   - resourceType: Observation
     id: 
     code: SNOMEDCT# # SNOMEDCT#309226005 Colonic polyp sample (specimen) or SNOMEDCT#309263001 Rectal polyp sample (specimen)

@@ -6,7 +6,13 @@ const colonoscopyProcedureIndex = 0;
 const colonoscopicPolypectomyProcedureIndex = 1;
 const diagnosticReportIndex = 2;
 const specimen0Index = 3;
-const observationIndex = 4;
+const specimenObservationIndex = 4;
+const specimenTemplate = {...doc.data[specimen0Index]};
+const specimenObservationTemplate = {...doc.data[specimenObservationIndex]};
+const diagnosticReportSpecimenTemplate = {...doc.data[diagnosticReportIndex].specimen[0]};
+const diagnosticReportResultTemplate = {...doc.data[diagnosticReportIndex].result[0]};
+// console.log(diagnosticReportSpecimenTemplate);
+// console.log(diagnosticReportResultTemplate);
 colonoscopyProcedureId = uuidv4();
 diagnosticReportId = uuidv4();
 specimen0Id = uuidv4();
@@ -18,10 +24,31 @@ doc.data[diagnosticReportIndex].id = diagnosticReportId;
 doc.data[colonoscopicPolypectomyProcedureIndex].report[0].reference = 'DiagnosticReport/' + diagnosticReportId;
 doc.data[specimen0Index].id = specimen0Id;
 doc.data[diagnosticReportIndex].specimen[0].reference = 'Specimen/' + specimen0Id;
-doc.data[observationIndex].id = observationId;
-doc.data[observationIndex].specimen[0].reference = 'Specimen/' + specimen0Id;
+doc.data[specimenObservationIndex].id = observationId;
+doc.data[specimenObservationIndex].specimen[0].reference = 'Specimen/' + specimen0Id;
 doc.data[diagnosticReportIndex].result[0].reference   = 'Observation/' + observationId;
 fs.writeFileSync('id.yml', yaml.dump(doc.data));
 // for each additional specimen pop a Specimen then and Observation to the end of the array and assign ids
 // ... then pop a specimen reference and result reference to DiagnosticReport
-// and tie them back to the new Speciment and OBservation ids. 
+// and tie them back to the new Speciment and Observation ids. 
+const nextSpecimen = specimenTemplate
+const nextSpecimenId =  uuidv4();
+nextSpecimen.id = nextSpecimenId;
+// console.log(nextSpecimen);
+const nextDiagnosticReportSpecimen = diagnosticReportSpecimenTemplate;
+nextDiagnosticReportSpecimen.reference = 'Specimen/' + nextSpecimenId;
+// console.log(nextDiagnosticReportSpecimen);
+const nextSpecimenObservation = specimenObservationTemplate;
+const nextSpecimenObservationId = uuidv4();
+nextSpecimenObservation.id = nextSpecimenObservationId;
+// const nextDiagnosticReportResult = diagnosticReportResultTemplate;
+// nextDiagnosticReportResult.reference = 'Observation' + nextSpecimenObservationId;
+// console.log(nextSpecimenObservation);
+// console.log(nextDiagnosticReportResult);
+doc.data.push(nextSpecimen);
+// console.log(doc.data[doc.data.length-1]);
+// console.log(doc.data);
+doc.data.push(nextSpecimenObservation);
+// doc.data[diagnosticReportIndex].specimen.push(nextDiagnosticReportSpecimen);
+// doc.data[diagnosticReportIndex].result.push(nextDiagnosticReportResult);
+fs.writeFileSync('oneMoreSpecimen.yml', yaml.dump(doc.data, {noRefs: true}));
