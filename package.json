@@ -12,6 +12,7 @@
     "main": "src/main.js",
     "private": true,
     "dependencies": {
+        "@types/node": "^18.0.6",
         "js-yaml": "^4.1.0",
         "uuid": "^8.3.2"
     },
