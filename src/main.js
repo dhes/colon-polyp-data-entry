@@ -1,15 +1,15 @@
-const yaml = require("js-yaml");
-const fs = require("fs");
-const { v4: uuidv4 } = require("uuid");
-const report = yaml.load(fs.readFileSync("src/report_template.yml", "utf8"));
+const yaml = require('js-yaml');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
+const report = yaml.load(fs.readFileSync('src/report_template.yml', 'utf8'));
 const colonoscopyProcedureIndex = 0;
 const colonoscopicPolypectomyProcedureIndex = 1;
 const diagnosticReportIndex = 2;
 const specimenTemplate = yaml.load(
-  fs.readFileSync("src/specimenTemplate.yml", "utf8")
+  fs.readFileSync('src/specimenTemplate.yml', 'utf8')
 );
 const specimenObservationTemplate = yaml.load(
-  fs.readFileSync("src/specimenObservationTemplate.yml", "utf8")
+  fs.readFileSync('src/specimenObservationTemplate.yml', 'utf8')
 );
 const colonoscopyProcedureId = uuidv4();
 const diagnosticReportId = uuidv4();
@@ -19,12 +19,17 @@ report[colonoscopicPolypectomyProcedureIndex].partOf[0].reference =
 report[diagnosticReportIndex].id = diagnosticReportId;
 report[colonoscopicPolypectomyProcedureIndex].report[0].reference =
   "DiagnosticReport/" + diagnosticReportId;
-function addSpecimen() {
+const polyps = yaml.load(fs.readFileSync('src/polyps.yml', 'utf8'));
+const bodySites = yaml.load(fs.readFileSync('src/bodySites.yml', 'utf8'));
+console.log(bodySites['cecum']);
+polyps.forEach(addSpecimen)
+function addSpecimen(polyp) {
+  // console.log(polyp);
   const specimenResource = structuredClone(specimenTemplate);
-  //   const specimenResource = { ...specimenTemplate };
   const specimenId = uuidv4();
   specimenResource.id = specimenId;
-  //   const specimenObservation = { ...specimenObservationTemplate };
+  // add from polyp.bodySite
+  specimenResource.collection.bodySite = bodySites[polyp.bodySite];
   const specimenObservation = structuredClone(specimenObservationTemplate);
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;
@@ -44,6 +49,4 @@ function addSpecimen() {
     display: null,
   });
 }
-addSpecimen();
-addSpecimen();
-fs.writeFileSync("oneMoreSpecimen.yml", yaml.dump(report, { noRefs: true }));
+fs.writeFileSync('oneMoreSpecimen.yml', yaml.dump(report, { noRefs: true }));
