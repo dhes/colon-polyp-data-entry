@@ -30,6 +30,7 @@ function addSpecimen(polyp) {
   specimenResource.id = specimenId;
   // add from polyp.bodySite
   specimenResource.collection.bodySite = shortHand.bodySites[polyp.bodySite];
+  specimenResource.collection.quantity = polyp.length;
   const specimenObservation = structuredClone(specimenObservationTemplate);
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;
@@ -41,9 +42,9 @@ function addSpecimen(polyp) {
   specimenObservation.hasMember.push(
     shortHand.pathology[polyp.pathology]
   )};
-  specimenObservation.hasMember.push(shortHand.piecemeal[polyp.piecemeal-excision]);
-  // specimenObservation.hasMember.push(shortHand.pathology[polyp.severe-dysplasia]);
-  // specimenObservation.hasMember.push(shortHand.pathology[polyp.no-evidence-of-malignancy]);
+  specimenObservation.hasMember.push(shortHand.piecemealExcision[polyp.piecemealExcision]);
+  specimenObservation.hasMember.push(shortHand.severeDysplasia[polyp.severeDysplasia]);
+  specimenObservation.hasMember.push(shortHand.noEvidenceOfMalignantNeoplasm[polyp.noEvidenceOfMalignantNeoplasm]);
   report.push(specimenResource);
   report.push(specimenObservation);
   report[diagnosticReportIndex].specimen.push({
