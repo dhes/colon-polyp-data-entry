@@ -21,17 +21,24 @@ pathology:
   tubulovillous-adenoma:
     reference: Observation/33df1745-9a60-4fbb-8b72-14d914bdb127
     display: Tubulovillous adenoma
-piecemeal:
+piecemealExcision:
   true: 
     reference: Observation/27336643-3d3b-41e3-9cc2-5e46524ceb00
-    display: "true"
+    display: piecemeal excision true
   false: 
     reference: Observation/a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
-    display: "false"
-severe-dysplasia:
+    display: piecemeal excision false
+severeDysplasia:
   true: 
-    reference: Observation/ 
-    display: "true"
+    reference: Observation/12428849-6bf1-48a2-a917-42251859652f
+    display: severe dysplasia true
   false: 
-    reference: Observation/ 
-    display: "false"
+    reference: Observation/abcb49db-960b-4de6-aa0a-2e072c438dd4
+    display: severe dysplasia false
+noEvidenceOfMalignantNeoplasm:
+  true: 
+    reference: Observation/71f00532-66d9-4634-aa0e-bff0aafaf9a1
+    display: no evidence of malignant neoplasm true
+  false: 
+    reference: Observation/033ebe6e-2b41-457e-adc8-3081093d4afd
+    display: no evidence of malignant neoplasm false

@@ -1,45 +1,51 @@
 # from 2020
 - bodySite: ascending-colon
-  length: 
+  length: 1 mm # placeholder
   note: A. Ascending colon polyp cold snare
-  pathology: null
-  piecemeal-excision: 
-  severe-dysplasia: 
+  pathology: tubular-adenoma
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
 - bodySite: transverse-colon
-  length: 
+  length: 2 mm # placeholder
   note: B. Transverse polyp cold biopsy 1
   pathology: tubular-adenoma
-  piecemeal-excision: 
-  severe-dysplasia: 
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
 - bodySite: transverse-colon
-  length: 
+  length: 3 mm # placeholder
   note: B. Transverse polyp cold biopsy 2
   pathology: tubular-adenoma
-  piecemeal-excision: 
-  severe-dysplasia: 
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
 - bodySite: transverse-colon
-  length: 
+  length: 4 mm # placeholder
   note: B. Transverse polyp cold biopsy 3
   pathology: tubular-adenoma
-  piecemeal-excision: 
-  severe-dysplasia: 
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
 - bodySite: transverse-colon
-  length: 
+  length: 5 mm # placeholder
   note: B. Transverse polyp cold biopsy 4
   pathology: tubular-adenoma
-  piecemeal-excision: 
-  severe-dysplasia: 
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
 - bodySite: transverse-colon
-  length: 
+  length: 6 mm # placeholder
   note: B. Transverse polyp cold biopsy 5
   pathology: tubular-adenoma
-  piecemeal-excision: 
-  severe-dysplasia: 
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
 - bodySite: sigmoid-colon
-  length: 
+  length: 7 mm # placeholder
   note: C. Sigmoid polyp cold snare
   pathology: tubular-adenoma
-  piecemeal-excision: 
-  severe-dysplasia: 
-
+  piecemealExcision: false # placeholder
+  severeDysplasia: false
+  noEvidenceOfMalignantNeoplasm: true
   

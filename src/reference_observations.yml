@@ -32,6 +32,21 @@
     code: LOINC#34574-4 Pathology report final diagnosis
     valueCodeableConcept: SNOMEDCT#61722000 Tubulovillous adenoma (morphologic abnormality)
   - resourceType: Observation
+    id: 27336643-3d3b-41e3-9cc2-5e46524ceb00
+    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
+    code: SNOMEDCT#787139004 Piecemeal excision
+    valueBoolean: true
+  - resourceType: Observation
+    id: a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
+    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
+    code: SNOMEDCT#787139004 Piecemeal excision
+    valueBoolean: false
+  - resourceType: Observation
+    id: 12428849-6bf1-48a2-a917-42251859652f
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: SNOMEDCT#55237006 Severe dysplasia (morphologic abnormality)
+    valueBoolean: true
+  - resourceType: Observation
     id: abcb49db-960b-4de6-aa0a-2e072c438dd4
     category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
     code: SNOMEDCT#55237006 Severe dysplasia (morphologic abnormality)
@@ -42,12 +57,7 @@
     code: SNOMEDCT#110396000 No evidence of malignant neoplasm (finding)
     valueBoolean: true
   - resourceType: Observation
-    id: 27336643-3d3b-41e3-9cc2-5e46524ceb00
-    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
-    code: SNOMEDCT#787139004 Piecemeal excision
-    valueBoolean: true
-  - resourceType: Observation
-    id: a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
-    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
-    code: SNOMEDCT#787139004 Piecemeal excision
+    id: 033ebe6e-2b41-457e-adc8-3081093d4afd
+    category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
+    code: SNOMEDCT#110396000 No evidence of malignant neoplasm (finding)
     valueBoolean: false
