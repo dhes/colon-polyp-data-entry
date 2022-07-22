@@ -37,6 +37,13 @@ function addSpecimen(polyp) {
     reference: "Specimen/" + specimenId,
     display: null,
   });
+  if(polyp.pathology) { // or mayge you should just let it error out
+  specimenObservation.hasMember.push(
+    shortHand.pathology[polyp.pathology]
+  )};
+  specimenObservation.hasMember.push(shortHand.pathology[polyp.piecemeal-excision]);
+  specimenObservation.hasMember.push(shortHand.pathology[polyp.severe-dysplasia]);
+  // specimenObservation.hasMember.push(shortHand.pathology[polyp.no-evidence-of-malignancy]);
   report.push(specimenResource);
   report.push(specimenObservation);
   report[diagnosticReportIndex].specimen.push({

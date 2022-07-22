@@ -2,12 +2,4 @@ resourceType: Observation
 id: null
 code: SNOMEDCT#
 specimen: []
-hasMember:
-  - reference: Observation/
-    display: null
-  - reference: Observation/
-    display: null
-  - reference: Observation/
-    display: null
-  - reference: Observation/
-    display: null
+hasMember: []

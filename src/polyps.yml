@@ -2,57 +2,43 @@
 - bodySite: ascending-colon
   length: 
   note: A. Ascending colon polyp cold snare
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 # reference_observations.yml id
-    display: Tubular Adenoma
+  pathology: null
   piecemeal-excision: 
   severe-dysplasia: 
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 1
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
-    display: Tubular Adenoma
+  pathology: tubular-adenoma
   piecemeal-excision: 
   severe-dysplasia: 
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 2
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
-    display: Tubular Adenoma
+  pathology: tubular-adenoma
   piecemeal-excision: 
   severe-dysplasia: 
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 3
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
-    display: Tubular Adenoma
+  pathology: tubular-adenoma
   piecemeal-excision: 
   severe-dysplasia: 
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 4
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
-    display: Tubular Adenoma
+  pathology: tubular-adenoma
   piecemeal-excision: 
   severe-dysplasia: 
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 5
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
-    display: Tubular Adenoma
+  pathology: tubular-adenoma
   piecemeal-excision: 
   severe-dysplasia: 
 - bodySite: sigmoid-colon
   length: 
   note: C. Sigmoid polyp cold snare
-  pathology: 
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
-    display: Tubular Adenoma
+  pathology: tubular-adenoma
   piecemeal-excision: 
   severe-dysplasia: 
 
