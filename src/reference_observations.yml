@@ -42,12 +42,12 @@
     code: SNOMEDCT#110396000 No evidence of malignant neoplasm (finding)
     valueBoolean: true
   - resourceType: Observation
-    id: a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
-    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
-    code: SNOMEDCT#787139004 Piecemeal excision
-    valueBoolean: false
-  - resourceType: Observation
     id: 27336643-3d3b-41e3-9cc2-5e46524ceb00
     category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
     code: SNOMEDCT#787139004 Piecemeal excision
     valueBoolean: true
+  - resourceType: Observation
+    id: a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
+    category: http://terminology.hl7.org/CodeSystem/observation-category#procedure Procedure
+    code: SNOMEDCT#787139004 Piecemeal excision
+    valueBoolean: false

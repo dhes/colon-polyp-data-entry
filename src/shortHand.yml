@@ -21,3 +21,17 @@ pathology:
   tubulovillous-adenoma:
     reference: Observation/33df1745-9a60-4fbb-8b72-14d914bdb127
     display: Tubulovillous adenoma
+piecemeal:
+  true: 
+    reference: Observation/27336643-3d3b-41e3-9cc2-5e46524ceb00
+    display: "true"
+  false: 
+    reference: Observation/a3831e2a-ec9b-4aa5-ae5e-e83e866d41a4
+    display: "false"
+severe-dysplasia:
+  true: 
+    reference: Observation/ 
+    display: "true"
+  false: 
+    reference: Observation/ 
+    display: "false"

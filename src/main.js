@@ -41,8 +41,8 @@ function addSpecimen(polyp) {
   specimenObservation.hasMember.push(
     shortHand.pathology[polyp.pathology]
   )};
-  specimenObservation.hasMember.push(shortHand.pathology[polyp.piecemeal-excision]);
-  specimenObservation.hasMember.push(shortHand.pathology[polyp.severe-dysplasia]);
+  specimenObservation.hasMember.push(shortHand.piecemeal[polyp.piecemeal-excision]);
+  // specimenObservation.hasMember.push(shortHand.pathology[polyp.severe-dysplasia]);
   // specimenObservation.hasMember.push(shortHand.pathology[polyp.no-evidence-of-malignancy]);
   report.push(specimenResource);
   report.push(specimenObservation);
