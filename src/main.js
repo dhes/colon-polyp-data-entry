@@ -20,8 +20,8 @@ report[diagnosticReportIndex].id = diagnosticReportId;
 report[colonoscopicPolypectomyProcedureIndex].report[0].reference =
   "DiagnosticReport/" + diagnosticReportId;
 const polyps = yaml.load(fs.readFileSync('src/polyps.yml', 'utf8'));
-const bodySites = yaml.load(fs.readFileSync('src/bodySites.yml', 'utf8'));
-console.log(bodySites['cecum']);
+const shortHand = yaml.load(fs.readFileSync('src/shortHand.yml', 'utf8'));
+// console.log(shortHand.bodySites['cecum']);
 polyps.forEach(addSpecimen)
 function addSpecimen(polyp) {
   // console.log(polyp);
@@ -29,7 +29,7 @@ function addSpecimen(polyp) {
   const specimenId = uuidv4();
   specimenResource.id = specimenId;
   // add from polyp.bodySite
-  specimenResource.collection.bodySite = bodySites[polyp.bodySite];
+  specimenResource.collection.bodySite = shortHand.bodySites[polyp.bodySite];
   const specimenObservation = structuredClone(specimenObservationTemplate);
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;

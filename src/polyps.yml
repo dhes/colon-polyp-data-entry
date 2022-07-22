@@ -2,7 +2,7 @@
 - bodySite: ascending-colon
   length: 
   note: A. Ascending colon polyp cold snare
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 # reference_observations.yml id
     display: Tubular Adenoma
   piecemeal-excision: 
@@ -10,7 +10,7 @@
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 1
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
     display: Tubular Adenoma
   piecemeal-excision: 
@@ -18,7 +18,7 @@
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 2
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
     display: Tubular Adenoma
   piecemeal-excision: 
@@ -26,7 +26,7 @@
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 3
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
     display: Tubular Adenoma
   piecemeal-excision: 
@@ -34,7 +34,7 @@
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 4
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
     display: Tubular Adenoma
   piecemeal-excision: 
@@ -42,7 +42,7 @@
 - bodySite: transverse-colon
   length: 
   note: B. Transverse polyp cold biopsy 5
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
     display: Tubular Adenoma
   piecemeal-excision: 
@@ -50,7 +50,7 @@
 - bodySite: sigmoid-colon
   length: 
   note: C. Sigmoid polyp cold snare
-  path: 
+  pathology: 
     id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7 
     display: Tubular Adenoma
   piecemeal-excision: 
