@@ -5,3 +5,19 @@ bodySites:
   descending-colon: SNOMEDCT#32622004 Descending colon structure (body structure)
   sigmoid-colon: SNOMEDCT#60184004 Sigmoid colon structure (body structure)
   rectum: SNOMEDCT#34402009 Rectum structure (body structure)
+pathology:
+  intestinal-mucosa: 
+    reference: Observation/9a5ada92-bb53-4cf3-a04b-11a0e672e1f1
+    display: Mucosal fold
+  hyperplastic-polyp:
+    reference: Observation/93b40608-5c08-4917-b396-7a660df76587
+    display: Hyperplastic Polyp
+  tubular-adenoma:
+    reference: Observation/f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7
+    display: Tubular adenoma of colon
+  villous-adenoma:
+    reference: Observation/bf0ba3b4-bdbf-4aa2-bac2-90d8e1f0183d
+    display: Villous adenoma
+  tubulovillous-adenoma:
+    reference: Observation/33df1745-9a60-4fbb-8b72-14d914bdb127
+    display: Tubulovillous adenoma

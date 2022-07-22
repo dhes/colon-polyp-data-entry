@@ -7,27 +7,27 @@
   #   code: LOINC#34574-4 Pathology report final diagnosis
   #   valueCodeableConcept: SNOMEDCT#444898006 Tubular adenoma of colon (disorder)
   - resourceType: Observation
-    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7
+    id: 9a5ada92-bb53-4cf3-a04b-11a0e672e1f1
     category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
     code: LOINC#34574-4 Pathology report final diagnosis
-    valueCodeableConcept: SNOMEDCT#444408007 Tubular adenoma (disorder)
+    valueCodeableConcept: SNOMEDCT#68534000 Intestinal mucous membrane structure (body structure)
   - resourceType: Observation
     id: 93b40608-5c08-4917-b396-7a660df76587
     category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
     code: LOINC#34574-4 Pathology report final diagnosis
     valueCodeableConcept: SNOMEDCT#89452002 Hyperplastic polyp of intestine (disorder)
   - resourceType: Observation
-    id: 9a5ada92-bb53-4cf3-a04b-11a0e672e1f1
+    id: f018a8d3-2c33-4ffc-b7cd-6ce4fc8624b7
     category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
     code: LOINC#34574-4 Pathology report final diagnosis
-    valueCodeableConcept: SNOMEDCT#68534000 Intestinal mucous membrane structure (body structure)
+    valueCodeableConcept: SNOMEDCT#444408007 Tubular adenoma (disorder)
   - resourceType: Observation
-    id: 
+    id: bf0ba3b4-bdbf-4aa2-bac2-90d8e1f0183d
     category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
     code: LOINC#34574-4 Pathology report final diagnosis
     valueCodeableConcept: SNOMEDCT#128859003 Villous adenoma (morphologic abnormality)
   - resourceType: Observation
-    id: 
+    id: 33df1745-9a60-4fbb-8b72-14d914bdb127
     category: http://terminology.hl7.org/CodeSystem/observation-category#laboratory Laboratory
     code: LOINC#34574-4 Pathology report final diagnosis
     valueCodeableConcept: SNOMEDCT#61722000 Tubulovillous adenoma (morphologic abnormality)
