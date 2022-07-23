@@ -1,4 +1,7 @@
 # from 2020
+collectionDate: 2020-07-24
+reportDate: 2020-07-25
+polyps:
 - bodySite: ascending-colon
   length: 1 mm # placeholder
   note: A. Ascending colon polyp cold snare
@@ -48,4 +51,3 @@
   piecemealExcision: false # placeholder
   severeDysplasia: false
   noEvidenceOfMalignantNeoplasm: true
-  
