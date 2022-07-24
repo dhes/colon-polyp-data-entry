@@ -2,52 +2,52 @@
 collectionDate: 2020-07-24
 reportDate: 2020-07-25
 polyps:
-- bodySite: ascending-colon
-  length: 1 mm # placeholder
-  note: A. Ascending colon polyp cold snare
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
-- bodySite: transverse-colon
-  length: 2 mm # placeholder
-  note: B. Transverse polyp cold biopsy 1
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
-- bodySite: transverse-colon
-  length: 3 mm # placeholder
-  note: B. Transverse polyp cold biopsy 2
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
-- bodySite: transverse-colon
-  length: 4 mm # placeholder
-  note: B. Transverse polyp cold biopsy 3
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
-- bodySite: transverse-colon
-  length: 5 mm # placeholder
-  note: B. Transverse polyp cold biopsy 4
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
-- bodySite: transverse-colon
-  length: 6 mm # placeholder
-  note: B. Transverse polyp cold biopsy 5
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
-- bodySite: sigmoid-colon
-  length: 7 mm # placeholder
-  note: C. Sigmoid polyp cold snare
-  pathology: tubular-adenoma
-  piecemealExcision: false # placeholder
-  severeDysplasia: false
-  noEvidenceOfMalignantNeoplasm: true
+  - bodySite: ascending-colon
+    length: 1 mm # placeholder
+    note: A. Ascending colon polyp cold snare
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: transverse-colon
+    length: 2 mm # placeholder
+    note: B. Transverse polyp cold biopsy 1
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: transverse-colon
+    length: 3 mm # placeholder
+    note: B. Transverse polyp cold biopsy 2
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: transverse-colon
+    length: 4 mm # placeholder
+    note: B. Transverse polyp cold biopsy 3
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: transverse-colon
+    length: 5 mm # placeholder
+    note: B. Transverse polyp cold biopsy 4
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: transverse-colon
+    length: 6 mm # placeholder
+    note: B. Transverse polyp cold biopsy 5
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: sigmoid-colon
+    length: 7 mm # placeholder
+    note: C. Sigmoid polyp cold snare
+    pathology: tubular-adenoma
+    piecemealExcision: false # placeholder
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true

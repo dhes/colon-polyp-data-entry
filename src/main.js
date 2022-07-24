@@ -2,10 +2,10 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 const report = yaml.load(fs.readFileSync('src/report_template.yml', 'utf8'));
-const specimenTemplate = yaml.load(fs.readFileSync('src/specimenTemplate.yml', 'utf8'));
-const specimenObservationTemplate = yaml.load(fs.readFileSync('src/specimenObservationTemplate.yml', 'utf8'));
+const specimen_template = yaml.load(fs.readFileSync('src/specimen_template.yml', 'utf8'));
+const specimen_observation_template = yaml.load(fs.readFileSync('src/specimen_observation_template.yml', 'utf8'));
 const info = yaml.load(fs.readFileSync('src/polyps.yml', 'utf8'));
-const shortHand = yaml.load(fs.readFileSync('src/shortHand.yml', 'utf8'));
+const shorthand = yaml.load(fs.readFileSync('src/shorthand.yml', 'utf8'));
 const polyps = info.polyps;
 const collectionDate = info.collectionDate;
 const reportDate = info.reportDate;
@@ -26,14 +26,14 @@ report[colonoscopicPolypectomyProcedureIndex].report[0].reference =
   "DiagnosticReport/" + diagnosticReportId;
 polyps.forEach(addSpecimen)
 function addSpecimen(polyp) {
-  const specimenResource = structuredClone(specimenTemplate);
+  const specimenResource = structuredClone(specimen_template);
   const specimenId = uuidv4();
   specimenResource.id = specimenId;
   specimenResource.collection.collectedDateTime = collectionDate;
-  specimenResource.collection.bodySite = shortHand.bodySites[polyp.bodySite];
+  specimenResource.collection.bodySite = shorthand.bodySites[polyp.bodySite];
   specimenResource.collection.quantity = polyp.length;
   specimenResource.note.text = polyp.note;
-  const specimenObservation = structuredClone(specimenObservationTemplate);
+  const specimenObservation = structuredClone(specimen_observation_template);
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;
   specimenObservation.specimen.push({
@@ -42,12 +42,12 @@ function addSpecimen(polyp) {
   });
   if (polyp.pathology) { 
     specimenObservation.hasMember.push(
-      shortHand.pathology[polyp.pathology]
+      shorthand.pathology[polyp.pathology]
     )
   };
-  specimenObservation.hasMember.push(shortHand.piecemealExcision[polyp.piecemealExcision]);
-  specimenObservation.hasMember.push(shortHand.severeDysplasia[polyp.severeDysplasia]);
-  specimenObservation.hasMember.push(shortHand.noEvidenceOfMalignantNeoplasm[polyp.noEvidenceOfMalignantNeoplasm]);
+  specimenObservation.hasMember.push(shorthand.piecemealExcision[polyp.piecemealExcision]);
+  specimenObservation.hasMember.push(shorthand.severeDysplasia[polyp.severeDysplasia]);
+  specimenObservation.hasMember.push(shorthand.noEvidenceOfMalignantNeoplasm[polyp.noEvidenceOfMalignantNeoplasm]);
   report.push(specimenResource);
   report.push(specimenObservation);
   report[diagnosticReportIndex].specimen.push({
