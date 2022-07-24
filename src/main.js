@@ -8,7 +8,7 @@ const info = yaml.load(fs.readFileSync('src/polyps.yml', 'utf8'));
 const shorthand = yaml.load(fs.readFileSync('src/shorthand.yml', 'utf8'));
 const polyps = info.polyps;
 const collectionDate = info.collectionDate;
-const reportDate = info.reportDate;
+// const reportDate = info.reportDate;
 const colonoscopyProcedureIndex = 0;
 const colonoscopicPolypectomyProcedureIndex = 1;
 const diagnosticReportIndex = 2;
@@ -60,3 +60,6 @@ function addSpecimen(polyp) {
   });
 }
 fs.writeFileSync('oneMoreSpecimen.yml', yaml.dump(report, { noRefs: true }));
+const base = yaml.load(fs.readFileSync('Medicare_Male.yml', 'utf8'));
+const fullReport = [...base, ...report];
+fs.writeFileSync('full_report.yml', yaml.dump(fullReport, { noRefs: true }));
