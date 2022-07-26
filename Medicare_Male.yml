@@ -3,10 +3,12 @@
   gender: male
   birthDate: 1953-07-04T00:00:00.000Z
 - resourceType: Condition
-  code: 
-    coding:
-      - 'SNOMEDCT#50485007 Low tension glaucoma (disorder)'
-      - 'ICD10CM#H40.12 Low-tension glaucoma'
+  # code: 
+  #   coding:
+  #     - 'SNOMEDCT#50485007 Low tension glaucoma (disorder)'
+  #     - 'ICD10CM#H40.12 Low-tension glaucoma'
+# simplify...
+  code: 'ICD10CM#H40.12 Low-tension glaucoma'
   onsetDateTime: 2013-09-14T00:00:000-10:00
 - resourceType: Condition
   code: 'SNOMEDCT#429047008 History of adenomatous polyp of colon (situation)'
