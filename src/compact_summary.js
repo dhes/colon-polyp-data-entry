@@ -1,7 +1,12 @@
 // reformat a yml test file to make it a little more human readable
 const yaml = require("js-yaml");
 const fs = require("fs");
+const { groupBy } = require("./utilities");
 const testFile = yaml.load(fs.readFileSync("Medicare_Male.yml", "utf8"));
+console.log(testFile);
+// try the groupBy function:
+const groupedResources = groupBy(testFile, "resourceType");
+console.log(groupedResources);
 let Conditions = testFile.filter(
   (resource) => resource.resourceType == "Condition"
 );
