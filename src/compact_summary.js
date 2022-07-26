@@ -30,4 +30,6 @@ for (const r of Problems) {
     condition += "- " + name + " (" + code + ")\n  ";
 }
 console.log(condition);
-fs.writeFileSync("condition.yml", yaml.dump(condition, { noRefs: true}));
+// let patientSummary = "Summary: \n" + condition
+// fs.writeFileSync("condition.yml", yaml.dump(patientSummary, { noRefs: true}));
+fs.writeFileSync("condition.yml", condition);
