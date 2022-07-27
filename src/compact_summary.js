@@ -3,12 +3,12 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 const { groupBy } = require("./utilities");
 const testFile = yaml.load(fs.readFileSync("Medicare_Male.yml", "utf8"));
-console.log(testFile);
+// console.log(testFile);
 // try the groupBy function:
-const groupedResources = groupBy(testFile, "resourceType");
-console.log(groupedResources);
-let Conditions = testFile.filter(
-  (resource) => resource.resourceType == "Condition"
+const groupedResources = groupBy(testFile, 'resourceType');
+// console.log(groupedResources);
+fs.writeFileSync('grouped_resources.yml', yaml.dump(groupedResources));
+let Conditions = testFile.filter(  (resource) => resource.resourceType == "Condition"
 );
 let Problems = structuredClone(Conditions);
 for (const r of Conditions) {
@@ -34,7 +34,7 @@ for (const r of Problems) {
     const code = r['code'].substring(0, indexOfHash) + " " + r['code'].substring(indexOfHash + 1, indexOfSpace)
     condition += "- " + name + " (" + code + ")\n  ";
 }
-console.log(condition);
+// console.log(condition);
 // let patientSummary = "Summary: \n" + condition
 // fs.writeFileSync("condition.yml", yaml.dump(patientSummary, { noRefs: true}));
 fs.writeFileSync("condition.yml", condition);
