@@ -1,11 +1,11 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-const report = yaml.load(fs.readFileSync('src/report_template.yml', 'utf8'));
-const specimen_template = yaml.load(fs.readFileSync('src/specimen_template.yml', 'utf8'));
-const specimen_observation_template = yaml.load(fs.readFileSync('src/specimen_observation_template.yml', 'utf8'));
-const info = yaml.load(fs.readFileSync('src/polyps.yml', 'utf8'));
-const shorthand = yaml.load(fs.readFileSync('src/shorthand.yml', 'utf8'));
+const report = yaml.load(fs.readFileSync('src/templates/report_template.yml', 'utf8'));
+const specimen_template = yaml.load(fs.readFileSync('src/templates/specimen_template.yml', 'utf8'));
+const specimen_observation_template = yaml.load(fs.readFileSync('src/templates/specimen_observation_template.yml', 'utf8'));
+const info = yaml.load(fs.readFileSync('src/data/2020_polyps.yml', 'utf8'));
+const shorthand = yaml.load(fs.readFileSync('src/templates/shorthand.yml', 'utf8'));
 const polyps = info.polyps;
 const collectionDate = info.collectionDate;
 // const reportDate = info.reportDate;
@@ -59,7 +59,9 @@ function addSpecimen(polyp) {
     display: polyp.note,
   });
 }
+// just this generated polyp report:
 fs.writeFileSync('oneMoreSpecimen.yml', yaml.dump(report, { noRefs: true }));
-const base = yaml.load(fs.readFileSync('Medicare_Male.yml', 'utf8'));
+const base = yaml.load(fs.readFileSync('src/data/Medicare_Male.yml', 'utf8'));
+// this polyp report appended to a patient file
 const fullReport = [...base, ...report];
 fs.writeFileSync('full_report.yml', yaml.dump(fullReport, { noRefs: true }));

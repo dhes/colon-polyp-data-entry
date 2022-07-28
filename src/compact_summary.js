@@ -2,7 +2,7 @@
 const yaml = require("js-yaml");
 const fs = require("fs");
 const { groupBy } = require("./utilities");
-const testFile = yaml.load(fs.readFileSync("Medicare_Male.yml", "utf8"));
+const testFile = yaml.load(fs.readFileSync('src/data/Medicare_Male.yml', 'utf8'));
 // console.log(testFile);
 // try the groupBy function:
 const groupedResources = groupBy(testFile, 'resourceType');
