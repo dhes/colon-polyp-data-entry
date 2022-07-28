@@ -44,7 +44,8 @@ function addSpecimen(polyp) {
     specimenObservation.hasMember.push(
       shorthand.pathology[polyp.pathology]
     )
-  };
+  }; 
+  // specimenObservation.hasMember.push(polypSize); (pseudocode)
   specimenObservation.hasMember.push(shorthand.piecemealExcision[polyp.piecemealExcision]);
   specimenObservation.hasMember.push(shorthand.severeDysplasia[polyp.severeDysplasia]);
   specimenObservation.hasMember.push(shorthand.noEvidenceOfMalignantNeoplasm[polyp.noEvidenceOfMalignantNeoplasm]);
