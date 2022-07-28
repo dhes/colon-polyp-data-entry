@@ -1,0 +1,105 @@
+# from 2021
+# There is a discrepancy between the procedure report and the path report.
+# Procedure says there are 14 polyps. Path says there are 13.
+# For now I am going with the procedure report.
+collectionDate: 2021-10-04
+reportDate: 2021-10-05
+polyps:
+  - bodySite: Cecum
+    length: 3 mm
+    note: "A. COLD BIOPSY: CECAL POLYP"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: ascending-colon
+    length: 6 mm
+    note: "B. COLD SNARE: ASCENDING COLON POLYP 1"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: ascending-colon
+    length: 6 mm
+    note: "B. COLD SNARE: ASCENDING COLON POLYP 2"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: transverse-colon
+    length: 8 mm
+    note: "C. COLD SNARE: TRANSVERSE COLON POLYP 1"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: false
+  - bodySite: transverse-colon
+    length: 8 mm
+    note: "C. COLD SNARE: TRANSVERSE COLON POLYP 2"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: false
+  - bodySite: sigmoid-colon
+    length: 6 mm
+    note: "D. COLD SNARE X 1"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: sigmoid-colon
+    length: 4 mm
+    note: "COLD BIOPSY X 5: SIGMOID COLON 1"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: transverse-colon
+  - bodySite: sigmoid-colon
+    length: 4 mm
+    note: "COLD BIOPSY X 5: SIGMOID COLON 2"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: transverse-colon
+  - bodySite: sigmoid-colon
+    length: 4 mm
+    note: "COLD BIOPSY X 5: SIGMOID COLON 3"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: transverse-colon
+  - bodySite: sigmoid-colon
+    length: 4 mm
+    note: "COLD BIOPSY X 5: SIGMOID COLON 4"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: transverse-colon
+  - bodySite: sigmoid-colon
+    length: 4 mm
+    note: "COLD BIOPSY X 5: SIGMOID COLON 5"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: transverse-colon
+  - bodySite: sigmoid-colon
+    length: 4 mm
+    note: "COLD BIOPSY X 5: SIGMOID COLON 6"
+    pathology: hyperplastic-polyp
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: transverse-colon
+  - bodySite: rectum
+    length: 4 mm
+    note: "E. COLD BIOPSY: RECTAL POLYP 1"
+    pathology: tubular-adenoma
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
+  - bodySite: rectum
+    length: 4 mm
+    note: "E. COLD BIOPSY: RECTAL POLYP 2"
+    pathology: hyperplastic-polyp
+    piecemealExcision: false
+    severeDysplasia: false
+    noEvidenceOfMalignantNeoplasm: true
