@@ -1,0 +1,13 @@
+# template for YYYY_polyps.yml
+# from (year)
+collectionDate: 
+reportDate: 
+polyps:
+  - bodySite: # e.g. ascending-colon
+    length: # e.g. 5 mm
+    note: # e.g. A. Ascending colon polyp cold snare
+    pathology: # e.g. tubular-adenoma
+    piecemealExcision: # true/false
+    severeDysplasia: # true/false
+    noEvidenceOfMalignantNeoplasm: # true/false
+  # rinse and repeat
