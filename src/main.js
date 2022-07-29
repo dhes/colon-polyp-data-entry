@@ -5,7 +5,7 @@ const report = yaml.load(fs.readFileSync('src/templates/report_template.yml', 'u
 const specimen_template = yaml.load(fs.readFileSync('src/templates/specimen_template.yml', 'utf8'));
 const specimen_observation_template = yaml.load(fs.readFileSync('src/templates/specimen_observation_template.yml', 'utf8'));
 const info = yaml.load(fs.readFileSync('src/data/2011_polyps.yml', 'utf8'));
-const shorthand = yaml.load(fs.readFileSync('src/templates/shorthand.yml', 'utf8'));
+const shorthand = yaml.load(fs.readFileSync('src/templates/shorthand.yml', {encoding: 'utf8'}));
 const polyps = info.polyps;
 const collectionDate = info.collectionDate;
 // const reportDate = info.reportDate;
@@ -61,8 +61,4 @@ function addSpecimen(polyp) {
   });
 }
 // just this generated polyp report:
-fs.writeFileSync('oneMoreSpecimen.yml', yaml.dump(report, { noRefs: true }));
-const base = yaml.load(fs.readFileSync('src/data/Medicare_Male.yml', 'utf8'));
-// this polyp report appended to a patient file
-const fullReport = [...base, ...report];
-fs.writeFileSync('full_report.yml', yaml.dump(fullReport, { noRefs: true }));
+fs.writeFileSync('oneReport.yml', yaml.dump(report, { noRefs: true }));

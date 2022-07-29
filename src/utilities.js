@@ -1,7 +1,8 @@
 
+// group together FHIR resourcses in an attempt to ...
+// make a patient summary more readable
 // from https://sebhastian.com/javascript-group-by/
 
-// This one seems functionally identical to the second option
 function groupBy(arr, criteria) {
     const newObj = arr.reduce(function (acc, currentValue) {
       if (!acc[currentValue[criteria]]) {
@@ -9,7 +10,7 @@ function groupBy(arr, criteria) {
       }
       currentValueCriteria = currentValue[criteria];
       delete currentValue[criteria];  // DH added this line to prevent criteria key/value from showing up in the result
-      delete currentValue['meta'];
+      delete currentValue['meta']; // metas and extensions don't matter in a human-read summary
       delete currentValue['extension'];
       acc[currentValueCriteria].push(currentValue);
       // acc[currentValue[criteria]].push(currentValue);
@@ -17,12 +18,5 @@ function groupBy(arr, criteria) {
     }, {});
     return newObj;
   }
-
-// const groupBy = function (xs, key) {
-//   return xs.reduce(function (rv, x) {
-//     (rv[x[key]] = rv[x[key]] || []).push(x);
-//     return rv;
-//   }, {});
-// };
 
 exports.groupBy = groupBy;
