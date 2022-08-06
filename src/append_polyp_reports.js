@@ -1,6 +1,6 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
-const { compactFile2TestFile } = require("./compact_file_2_fest_file");
+const { compactFile2TestFile } = require("./compact_file_2_test_file");
 // collect yaml polyp file in a directory into one
 // expand them in to test files
 // merge the test files into a single report
