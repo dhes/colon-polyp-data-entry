@@ -4,8 +4,14 @@ const { v4: uuidv4 } = require('uuid');
 const report = yaml.load(fs.readFileSync('src/templates/report_template.yml', 'utf8'));
 const specimen_template = yaml.load(fs.readFileSync('src/templates/specimen_template.yml', 'utf8'));
 const specimen_observation_template = yaml.load(fs.readFileSync('src/templates/specimen_observation_template.yml', 'utf8'));
-const info = yaml.load(fs.readFileSync('src/data/2011_polyps.yml', 'utf8'));
-const shorthand = yaml.load(fs.readFileSync('src/templates/shorthand.yml', {encoding: 'utf8'}));
+// get the polyp report from the command line
+const procedureYear = process.argv.slice(2)[0];
+console.log(procedureYear);
+// const info = yaml.load(fs.readFileSync('src/data/2011_polyps.yml', 'utf8'));
+const info = yaml.load(fs.readFileSync(
+  '/Users/danheslinga/Dropbox/Health/Heslinga-Dan/' + procedureYear + '_polyps.yml', 'utf8'
+));
+const shorthand = yaml.load(fs.readFileSync('src/templates/shorthand.yml', { encoding: 'utf8' }));
 const polyps = info.polyps;
 const collectionDate = info.collectionDate;
 // const reportDate = info.reportDate;
@@ -36,15 +42,15 @@ function addSpecimen(polyp) {
   const specimenObservation = structuredClone(specimen_observation_template);
   const specimenObservationId = uuidv4();
   specimenObservation.id = specimenObservationId;
-  specimenObservation.specimen.push({
+  specimenObservation.specimen = {
     reference: "Specimen/" + specimenId,
     display: polyp.note,
-  });
-  if (polyp.pathology) { 
+  };
+  if (polyp.pathology) {
     specimenObservation.hasMember.push(
       shorthand.pathology[polyp.pathology]
     )
-  }; 
+  };
   // specimenObservation.hasMember.push(polypSize); (pseudocode)
   specimenObservation.hasMember.push(shorthand.piecemealExcision[polyp.piecemealExcision]);
   specimenObservation.hasMember.push(shorthand.severeDysplasia[polyp.severeDysplasia]);
@@ -61,4 +67,12 @@ function addSpecimen(polyp) {
   });
 }
 // just this generated polyp report:
-fs.writeFileSync('oneReport.yml', yaml.dump(report, { noRefs: true }));
+// fs.writeFileSync('oneReport.yml', yaml.dump(report, { noRefs: true }));
+fs.writeFileSync(
+  '/Users/danheslinga/Dropbox/Health/Heslinga-Dan/' + procedureYear + '_polyps_expanded.yml',
+  yaml.dump(
+    report, {
+    noRefs: true
+  }
+  )
+);
