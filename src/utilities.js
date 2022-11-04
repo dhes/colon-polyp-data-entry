@@ -1,5 +1,5 @@
 
-// group together FHIR resourcses in an attempt to ...
+// group together FHIR resources in an attempt to ...
 // make a patient summary more readable
 // from https://sebhastian.com/javascript-group-by/
 

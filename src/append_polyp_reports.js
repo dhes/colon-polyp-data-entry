@@ -4,7 +4,7 @@ const { compactFile2TestFile } = require("./compact_file_2_test_file");
 // collect yaml polyp file in a directory into one
 // expand them in to test files
 // merge the test files into a single report
-// add a patient summay
+// add a patient summary
 // run it as a test file
 // convert it to json
 // upload it to a FHIR server
