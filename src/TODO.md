@@ -1,0 +1,1 @@
+Since writing this routine I wrote a colonoscopy polyp decision aid with an accompanying ColonoscopyPolyp Implementation Guide. In the process I updated the polyp report data model. This routine need to be updated to meet the implementation guide requirements. 
